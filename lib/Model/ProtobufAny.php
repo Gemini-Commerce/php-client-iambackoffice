@@ -59,7 +59,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type_url' => 'string',
+        'at_type' => 'string',
         'value' => 'string'
     ];
 
@@ -71,7 +71,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type_url' => null,
+        'at_type' => null,
         'value' => 'byte'
     ];
 
@@ -81,7 +81,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'type_url' => false,
+        'at_type' => false,
 		'value' => false
     ];
 
@@ -171,7 +171,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'type_url' => 'typeUrl',
+        'at_type' => '@type',
         'value' => 'value'
     ];
 
@@ -181,7 +181,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'type_url' => 'setTypeUrl',
+        'at_type' => 'setAtType',
         'value' => 'setValue'
     ];
 
@@ -191,7 +191,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'type_url' => 'getTypeUrl',
+        'at_type' => 'getAtType',
         'value' => 'getValue'
     ];
 
@@ -252,7 +252,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('type_url', $data ?? [], null);
+        $this->setIfExists('at_type', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
     }
 
@@ -303,28 +303,28 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets type_url
+     * Gets at_type
      *
      * @return string|null
      */
-    public function getTypeUrl()
+    public function getAtType()
     {
-        return $this->container['type_url'];
+        return $this->container['at_type'];
     }
 
     /**
-     * Sets type_url
+     * Sets at_type
      *
-     * @param string|null $type_url A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one \"/\" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading \".\" is not accepted).  In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows:  * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a [google.protobuf.Type][]   value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the   URL, or have them precompiled into a binary to avoid any   lookup. Therefore, binary compatibility needs to be preserved   on changes to types. (Use versioned type names to manage   breaking changes.)  Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com.  Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.
+     * @param string|null $at_type A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one \"/\" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading \".\" is not accepted).  In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows:  * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a [google.protobuf.Type][]   value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the   URL, or have them precompiled into a binary to avoid any   lookup. Therefore, binary compatibility needs to be preserved   on changes to types. (Use versioned type names to manage   breaking changes.)  Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com.  Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.
      *
      * @return self
      */
-    public function setTypeUrl($type_url)
+    public function setAtType($at_type)
     {
-        if (is_null($type_url)) {
-            throw new \InvalidArgumentException('non-nullable type_url cannot be null');
+        if (is_null($at_type)) {
+            throw new \InvalidArgumentException('non-nullable at_type cannot be null');
         }
-        $this->container['type_url'] = $type_url;
+        $this->container['at_type'] = $at_type;
 
         return $this;
     }

@@ -68,8 +68,3 @@ lib/Model/ProtobufAny.php
 lib/Model/RpcStatus.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/IamBackofficeApiTest.php
-test/Model/IambackofficeCreateGroupRequestTest.php
-test/Model/IambackofficeCreateGroupResponseTest.php
-test/Model/IambackofficeGroupTypeTest.php
-test/Model/IambackofficeRegisterAgentRequestTest.php

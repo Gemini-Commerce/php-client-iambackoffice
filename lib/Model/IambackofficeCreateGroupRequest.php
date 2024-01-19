@@ -1,6 +1,6 @@
 <?php
 /**
- * IambackofficeAuthenticatorConfiguration
+ * IambackofficeCreateGroupRequest
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \GeminiCommerce\Iambackoffice\ObjectSerializer;
 
 /**
- * IambackofficeAuthenticatorConfiguration Class Doc Comment
+ * IambackofficeCreateGroupRequest Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\Iambackoffice
@@ -41,7 +41,7 @@ use \GeminiCommerce\Iambackoffice\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAccess, \JsonSerializable
+class IambackofficeCreateGroupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'iambackofficeAuthenticatorConfiguration';
+    protected static $openAPIModelName = 'iambackofficeCreateGroupRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'algorithm' => 'string',
-        'code_length' => 'int',
-        'time_step' => 'int'
+        'tenant_id' => 'string',
+        'name' => 'string',
+        'type' => '\GeminiCommerce\Iambackoffice\Model\IambackofficeGroupType'
     ];
 
     /**
@@ -71,9 +71,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'algorithm' => null,
-        'code_length' => 'int32',
-        'time_step' => 'int32'
+        'tenant_id' => null,
+        'name' => null,
+        'type' => null
     ];
 
     /**
@@ -82,9 +82,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'algorithm' => false,
-        'code_length' => false,
-        'time_step' => false
+        'tenant_id' => false,
+        'name' => false,
+        'type' => false
     ];
 
     /**
@@ -173,9 +173,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'algorithm' => 'algorithm',
-        'code_length' => 'codeLength',
-        'time_step' => 'timeStep'
+        'tenant_id' => 'tenantId',
+        'name' => 'name',
+        'type' => 'type'
     ];
 
     /**
@@ -184,9 +184,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'algorithm' => 'setAlgorithm',
-        'code_length' => 'setCodeLength',
-        'time_step' => 'setTimeStep'
+        'tenant_id' => 'setTenantId',
+        'name' => 'setName',
+        'type' => 'setType'
     ];
 
     /**
@@ -195,9 +195,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'algorithm' => 'getAlgorithm',
-        'code_length' => 'getCodeLength',
-        'time_step' => 'getTimeStep'
+        'tenant_id' => 'getTenantId',
+        'name' => 'getName',
+        'type' => 'getType'
     ];
 
     /**
@@ -257,9 +257,9 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('algorithm', $data ?? [], null);
-        $this->setIfExists('code_length', $data ?? [], null);
-        $this->setIfExists('time_step', $data ?? [], null);
+        $this->setIfExists('tenant_id', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
     }
 
     /**
@@ -305,82 +305,82 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
 
 
     /**
-     * Gets algorithm
+     * Gets tenant_id
      *
      * @return string|null
      */
-    public function getAlgorithm()
+    public function getTenantId()
     {
-        return $this->container['algorithm'];
+        return $this->container['tenant_id'];
     }
 
     /**
-     * Sets algorithm
+     * Sets tenant_id
      *
-     * @param string|null $algorithm algorithm
+     * @param string|null $tenant_id tenant_id
      *
      * @return self
      */
-    public function setAlgorithm($algorithm)
+    public function setTenantId($tenant_id)
     {
-        if (is_null($algorithm)) {
-            throw new \InvalidArgumentException('non-nullable algorithm cannot be null');
+        if (is_null($tenant_id)) {
+            throw new \InvalidArgumentException('non-nullable tenant_id cannot be null');
         }
-        $this->container['algorithm'] = $algorithm;
+        $this->container['tenant_id'] = $tenant_id;
 
         return $this;
     }
 
     /**
-     * Gets code_length
+     * Gets name
      *
-     * @return int|null
+     * @return string|null
      */
-    public function getCodeLength()
+    public function getName()
     {
-        return $this->container['code_length'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets code_length
+     * Sets name
      *
-     * @param int|null $code_length code_length
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setCodeLength($code_length)
+    public function setName($name)
     {
-        if (is_null($code_length)) {
-            throw new \InvalidArgumentException('non-nullable code_length cannot be null');
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        $this->container['code_length'] = $code_length;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets time_step
+     * Gets type
      *
-     * @return int|null
+     * @return \GeminiCommerce\Iambackoffice\Model\IambackofficeGroupType|null
      */
-    public function getTimeStep()
+    public function getType()
     {
-        return $this->container['time_step'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets time_step
+     * Sets type
      *
-     * @param int|null $time_step time_step
+     * @param \GeminiCommerce\Iambackoffice\Model\IambackofficeGroupType|null $type type
      *
      * @return self
      */
-    public function setTimeStep($time_step)
+    public function setType($type)
     {
-        if (is_null($time_step)) {
-            throw new \InvalidArgumentException('non-nullable time_step cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['time_step'] = $time_step;
+        $this->container['type'] = $type;
 
         return $this;
     }

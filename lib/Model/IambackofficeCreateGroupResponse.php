@@ -1,6 +1,6 @@
 <?php
 /**
- * IambackofficeAuthenticatorConfiguration
+ * IambackofficeCreateGroupResponse
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \GeminiCommerce\Iambackoffice\ObjectSerializer;
 
 /**
- * IambackofficeAuthenticatorConfiguration Class Doc Comment
+ * IambackofficeCreateGroupResponse Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\Iambackoffice
@@ -41,7 +41,7 @@ use \GeminiCommerce\Iambackoffice\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAccess, \JsonSerializable
+class IambackofficeCreateGroupResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'iambackofficeAuthenticatorConfiguration';
+    protected static $openAPIModelName = 'iambackofficeCreateGroupResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'algorithm' => 'string',
-        'code_length' => 'int',
-        'time_step' => 'int'
+        'group_id' => 'string'
     ];
 
     /**
@@ -71,9 +69,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'algorithm' => null,
-        'code_length' => 'int32',
-        'time_step' => 'int32'
+        'group_id' => null
     ];
 
     /**
@@ -82,9 +78,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'algorithm' => false,
-        'code_length' => false,
-        'time_step' => false
+        'group_id' => false
     ];
 
     /**
@@ -173,9 +167,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'algorithm' => 'algorithm',
-        'code_length' => 'codeLength',
-        'time_step' => 'timeStep'
+        'group_id' => 'groupId'
     ];
 
     /**
@@ -184,9 +176,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'algorithm' => 'setAlgorithm',
-        'code_length' => 'setCodeLength',
-        'time_step' => 'setTimeStep'
+        'group_id' => 'setGroupId'
     ];
 
     /**
@@ -195,9 +185,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'algorithm' => 'getAlgorithm',
-        'code_length' => 'getCodeLength',
-        'time_step' => 'getTimeStep'
+        'group_id' => 'getGroupId'
     ];
 
     /**
@@ -257,9 +245,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('algorithm', $data ?? [], null);
-        $this->setIfExists('code_length', $data ?? [], null);
-        $this->setIfExists('time_step', $data ?? [], null);
+        $this->setIfExists('group_id', $data ?? [], null);
     }
 
     /**
@@ -305,82 +291,28 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
 
 
     /**
-     * Gets algorithm
+     * Gets group_id
      *
      * @return string|null
      */
-    public function getAlgorithm()
+    public function getGroupId()
     {
-        return $this->container['algorithm'];
+        return $this->container['group_id'];
     }
 
     /**
-     * Sets algorithm
+     * Sets group_id
      *
-     * @param string|null $algorithm algorithm
+     * @param string|null $group_id group_id
      *
      * @return self
      */
-    public function setAlgorithm($algorithm)
+    public function setGroupId($group_id)
     {
-        if (is_null($algorithm)) {
-            throw new \InvalidArgumentException('non-nullable algorithm cannot be null');
+        if (is_null($group_id)) {
+            throw new \InvalidArgumentException('non-nullable group_id cannot be null');
         }
-        $this->container['algorithm'] = $algorithm;
-
-        return $this;
-    }
-
-    /**
-     * Gets code_length
-     *
-     * @return int|null
-     */
-    public function getCodeLength()
-    {
-        return $this->container['code_length'];
-    }
-
-    /**
-     * Sets code_length
-     *
-     * @param int|null $code_length code_length
-     *
-     * @return self
-     */
-    public function setCodeLength($code_length)
-    {
-        if (is_null($code_length)) {
-            throw new \InvalidArgumentException('non-nullable code_length cannot be null');
-        }
-        $this->container['code_length'] = $code_length;
-
-        return $this;
-    }
-
-    /**
-     * Gets time_step
-     *
-     * @return int|null
-     */
-    public function getTimeStep()
-    {
-        return $this->container['time_step'];
-    }
-
-    /**
-     * Sets time_step
-     *
-     * @param int|null $time_step time_step
-     *
-     * @return self
-     */
-    public function setTimeStep($time_step)
-    {
-        if (is_null($time_step)) {
-            throw new \InvalidArgumentException('non-nullable time_step cannot be null');
-        }
-        $this->container['time_step'] = $time_step;
+        $this->container['group_id'] = $group_id;
 
         return $this;
     }

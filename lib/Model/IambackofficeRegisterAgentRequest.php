@@ -1,6 +1,6 @@
 <?php
 /**
- * IambackofficeAuthenticatorConfiguration
+ * IambackofficeRegisterAgentRequest
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \GeminiCommerce\Iambackoffice\ObjectSerializer;
 
 /**
- * IambackofficeAuthenticatorConfiguration Class Doc Comment
+ * IambackofficeRegisterAgentRequest Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\Iambackoffice
@@ -41,7 +41,7 @@ use \GeminiCommerce\Iambackoffice\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAccess, \JsonSerializable
+class IambackofficeRegisterAgentRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'iambackofficeAuthenticatorConfiguration';
+    protected static $openAPIModelName = 'iambackofficeRegisterAgentRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'algorithm' => 'string',
-        'code_length' => 'int',
-        'time_step' => 'int'
+        'tenant_id' => 'string',
+        'email' => 'string',
+        'password' => 'string',
+        'agent_grn' => 'string'
     ];
 
     /**
@@ -71,9 +72,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'algorithm' => null,
-        'code_length' => 'int32',
-        'time_step' => 'int32'
+        'tenant_id' => null,
+        'email' => null,
+        'password' => null,
+        'agent_grn' => null
     ];
 
     /**
@@ -82,9 +84,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'algorithm' => false,
-        'code_length' => false,
-        'time_step' => false
+        'tenant_id' => false,
+        'email' => false,
+        'password' => false,
+        'agent_grn' => false
     ];
 
     /**
@@ -173,9 +176,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'algorithm' => 'algorithm',
-        'code_length' => 'codeLength',
-        'time_step' => 'timeStep'
+        'tenant_id' => 'tenantId',
+        'email' => 'email',
+        'password' => 'password',
+        'agent_grn' => 'agentGrn'
     ];
 
     /**
@@ -184,9 +188,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'algorithm' => 'setAlgorithm',
-        'code_length' => 'setCodeLength',
-        'time_step' => 'setTimeStep'
+        'tenant_id' => 'setTenantId',
+        'email' => 'setEmail',
+        'password' => 'setPassword',
+        'agent_grn' => 'setAgentGrn'
     ];
 
     /**
@@ -195,9 +200,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'algorithm' => 'getAlgorithm',
-        'code_length' => 'getCodeLength',
-        'time_step' => 'getTimeStep'
+        'tenant_id' => 'getTenantId',
+        'email' => 'getEmail',
+        'password' => 'getPassword',
+        'agent_grn' => 'getAgentGrn'
     ];
 
     /**
@@ -257,9 +263,10 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('algorithm', $data ?? [], null);
-        $this->setIfExists('code_length', $data ?? [], null);
-        $this->setIfExists('time_step', $data ?? [], null);
+        $this->setIfExists('tenant_id', $data ?? [], null);
+        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('password', $data ?? [], null);
+        $this->setIfExists('agent_grn', $data ?? [], null);
     }
 
     /**
@@ -305,82 +312,109 @@ class IambackofficeAuthenticatorConfiguration implements ModelInterface, ArrayAc
 
 
     /**
-     * Gets algorithm
+     * Gets tenant_id
      *
      * @return string|null
      */
-    public function getAlgorithm()
+    public function getTenantId()
     {
-        return $this->container['algorithm'];
+        return $this->container['tenant_id'];
     }
 
     /**
-     * Sets algorithm
+     * Sets tenant_id
      *
-     * @param string|null $algorithm algorithm
+     * @param string|null $tenant_id tenant_id
      *
      * @return self
      */
-    public function setAlgorithm($algorithm)
+    public function setTenantId($tenant_id)
     {
-        if (is_null($algorithm)) {
-            throw new \InvalidArgumentException('non-nullable algorithm cannot be null');
+        if (is_null($tenant_id)) {
+            throw new \InvalidArgumentException('non-nullable tenant_id cannot be null');
         }
-        $this->container['algorithm'] = $algorithm;
+        $this->container['tenant_id'] = $tenant_id;
 
         return $this;
     }
 
     /**
-     * Gets code_length
+     * Gets email
      *
-     * @return int|null
+     * @return string|null
      */
-    public function getCodeLength()
+    public function getEmail()
     {
-        return $this->container['code_length'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets code_length
+     * Sets email
      *
-     * @param int|null $code_length code_length
+     * @param string|null $email email
      *
      * @return self
      */
-    public function setCodeLength($code_length)
+    public function setEmail($email)
     {
-        if (is_null($code_length)) {
-            throw new \InvalidArgumentException('non-nullable code_length cannot be null');
+        if (is_null($email)) {
+            throw new \InvalidArgumentException('non-nullable email cannot be null');
         }
-        $this->container['code_length'] = $code_length;
+        $this->container['email'] = $email;
 
         return $this;
     }
 
     /**
-     * Gets time_step
+     * Gets password
      *
-     * @return int|null
+     * @return string|null
      */
-    public function getTimeStep()
+    public function getPassword()
     {
-        return $this->container['time_step'];
+        return $this->container['password'];
     }
 
     /**
-     * Sets time_step
+     * Sets password
      *
-     * @param int|null $time_step time_step
+     * @param string|null $password password
      *
      * @return self
      */
-    public function setTimeStep($time_step)
+    public function setPassword($password)
     {
-        if (is_null($time_step)) {
-            throw new \InvalidArgumentException('non-nullable time_step cannot be null');
+        if (is_null($password)) {
+            throw new \InvalidArgumentException('non-nullable password cannot be null');
         }
-        $this->container['time_step'] = $time_step;
+        $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets agent_grn
+     *
+     * @return string|null
+     */
+    public function getAgentGrn()
+    {
+        return $this->container['agent_grn'];
+    }
+
+    /**
+     * Sets agent_grn
+     *
+     * @param string|null $agent_grn agent_grn
+     *
+     * @return self
+     */
+    public function setAgentGrn($agent_grn)
+    {
+        if (is_null($agent_grn)) {
+            throw new \InvalidArgumentException('non-nullable agent_grn cannot be null');
+        }
+        $this->container['agent_grn'] = $agent_grn;
 
         return $this;
     }

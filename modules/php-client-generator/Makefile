@@ -5,7 +5,7 @@ CUR_GID := $(shell id -g)
 
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir := $(dir $(mkfile_path))
-openapi_generator = docker run --rm --user ${CUR_GID}:${CUR_UID} -v ${current_dir}/:/php-client-generator -v ${PWD}/:/php-client-${lower_service} openapitools/openapi-generator-cli:v7.0.1
+openapi_generator = docker run --rm --user ${CUR_GID}:${CUR_UID} -v ${current_dir}/:/php-client-generator -v ${PWD}/:/php-client-${lower_service} openapitools/openapi-generator-cli:v7.2.0
 lower_service = $(shell echo $(service) | sed -e 's/\(.*\)/\L\1/')
 lower_service_non_dashed = $(shell echo $(service) | sed -e 's/\(.*\)/\L\1/'| sed -e 's/-//g')
 ucf_service = $(shell echo $(service) | sed -e "s/\b\(.\)/\u\1/g")

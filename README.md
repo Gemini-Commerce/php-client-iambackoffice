@@ -49,23 +49,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-// Configure OAuth2 access token for authorization: standardAuthorization
-$config = GeminiCommerce\Iambackoffice\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\BasicOperationsApi(
+$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginRequest
+$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesRequest
 
 try {
-    $result = $apiInstance->login($body);
+    $result = $apiInstance->iamBackofficeAssignRoles($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BasicOperationsApi->login: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling IamBackofficeApi->iamBackofficeAssignRoles: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -76,31 +72,37 @@ All URIs are relative to *https://iambackoffice.api.gogemini.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BasicOperationsApi* | [**login**](docs/Api/BasicOperationsApi.md#login) | **POST** /iambackoffice.IamBackoffice/Login | Login Admin User
-*BasicOperationsApi* | [**logout**](docs/Api/BasicOperationsApi.md#logout) | **POST** /iambackoffice.IamBackoffice/Logout | Logout Admin User
-*BasicOperationsApi* | [**register**](docs/Api/BasicOperationsApi.md#register) | **POST** /iambackoffice.IamBackoffice/Register | Register Admin User
-*MFAApi* | [**disableUserMfa**](docs/Api/MFAApi.md#disableusermfa) | **POST** /iambackoffice.IamBackoffice/DisableUserMfa | Disable User MFA
-*MFAApi* | [**enableUserMfa**](docs/Api/MFAApi.md#enableusermfa) | **POST** /iambackoffice.IamBackoffice/EnableUserMfa | Enable User MFA
-*MFAApi* | [**generateSecretForQR**](docs/Api/MFAApi.md#generatesecretforqr) | **POST** /iambackoffice.IamBackoffice/GenerateSecretForQR | Generate Secret For QR
-*MFAApi* | [**loginMfa**](docs/Api/MFAApi.md#loginmfa) | **POST** /iambackoffice.IamBackoffice/LoginMfa | Login MFA Admin User
-*RolesApi* | [**assignRoles**](docs/Api/RolesApi.md#assignroles) | **POST** /iambackoffice.IamBackoffice/AssignRoles | Assign Roles
-*RolesApi* | [**unassignRoles**](docs/Api/RolesApi.md#unassignroles) | **POST** /iambackoffice.IamBackoffice/UnassignRoles | Unassign Roles
+*IamBackofficeApi* | [**iamBackofficeAssignRoles**](docs/Api/IamBackofficeApi.md#iambackofficeassignroles) | **POST** /iambackoffice.IamBackoffice/AssignRoles | AUTHZ
+*IamBackofficeApi* | [**iamBackofficeCreateGroup**](docs/Api/IamBackofficeApi.md#iambackofficecreategroup) | **POST** /iambackoffice.IamBackoffice/CreateGroup | GROUPS
+*IamBackofficeApi* | [**iamBackofficeDisableUserMfa**](docs/Api/IamBackofficeApi.md#iambackofficedisableusermfa) | **POST** /iambackoffice.IamBackoffice/DisableUserMfa | 
+*IamBackofficeApi* | [**iamBackofficeEnableUserMfa**](docs/Api/IamBackofficeApi.md#iambackofficeenableusermfa) | **POST** /iambackoffice.IamBackoffice/EnableUserMfa | 
+*IamBackofficeApi* | [**iamBackofficeGenerateSecretForQR**](docs/Api/IamBackofficeApi.md#iambackofficegeneratesecretforqr) | **POST** /iambackoffice.IamBackoffice/GenerateSecretForQR | MFA
+*IamBackofficeApi* | [**iamBackofficeLogin**](docs/Api/IamBackofficeApi.md#iambackofficelogin) | **POST** /iambackoffice.IamBackoffice/Login | LOGIN
+*IamBackofficeApi* | [**iamBackofficeLoginMfa**](docs/Api/IamBackofficeApi.md#iambackofficeloginmfa) | **POST** /iambackoffice.IamBackoffice/LoginMfa | LOGIN MFA
+*IamBackofficeApi* | [**iamBackofficeLogout**](docs/Api/IamBackofficeApi.md#iambackofficelogout) | **POST** /iambackoffice.IamBackoffice/Logout | 
+*IamBackofficeApi* | [**iamBackofficeRegister**](docs/Api/IamBackofficeApi.md#iambackofficeregister) | **POST** /iambackoffice.IamBackoffice/Register | REGISTRATION
+*IamBackofficeApi* | [**iamBackofficeRegisterAgent**](docs/Api/IamBackofficeApi.md#iambackofficeregisteragent) | **POST** /iambackoffice.IamBackoffice/RegisterAgent | AGENTS
+*IamBackofficeApi* | [**iamBackofficeUnassignRoles**](docs/Api/IamBackofficeApi.md#iambackofficeunassignroles) | **POST** /iambackoffice.IamBackoffice/UnassignRoles | 
 
 ## Models
 
 - [IambackofficeAssignRolesRequest](docs/Model/IambackofficeAssignRolesRequest.md)
 - [IambackofficeAssignRolesResponse](docs/Model/IambackofficeAssignRolesResponse.md)
 - [IambackofficeAuthenticatorConfiguration](docs/Model/IambackofficeAuthenticatorConfiguration.md)
+- [IambackofficeCreateGroupRequest](docs/Model/IambackofficeCreateGroupRequest.md)
+- [IambackofficeCreateGroupResponse](docs/Model/IambackofficeCreateGroupResponse.md)
 - [IambackofficeDevice](docs/Model/IambackofficeDevice.md)
 - [IambackofficeDisableUserMfaRequest](docs/Model/IambackofficeDisableUserMfaRequest.md)
 - [IambackofficeEnableUserMfaRequest](docs/Model/IambackofficeEnableUserMfaRequest.md)
 - [IambackofficeGenerateSecretForQRResponse](docs/Model/IambackofficeGenerateSecretForQRResponse.md)
+- [IambackofficeGroupType](docs/Model/IambackofficeGroupType.md)
 - [IambackofficeLoginMfaRequest](docs/Model/IambackofficeLoginMfaRequest.md)
 - [IambackofficeLoginRequest](docs/Model/IambackofficeLoginRequest.md)
 - [IambackofficeLoginResponse](docs/Model/IambackofficeLoginResponse.md)
 - [IambackofficeLogoutRequest](docs/Model/IambackofficeLogoutRequest.md)
 - [IambackofficeLogoutResponse](docs/Model/IambackofficeLogoutResponse.md)
 - [IambackofficeMetaData](docs/Model/IambackofficeMetaData.md)
+- [IambackofficeRegisterAgentRequest](docs/Model/IambackofficeRegisterAgentRequest.md)
 - [IambackofficeRegistrationRequest](docs/Model/IambackofficeRegistrationRequest.md)
 - [IambackofficeRegistrationResponse](docs/Model/IambackofficeRegistrationResponse.md)
 - [IambackofficeTwoFactorMethod](docs/Model/IambackofficeTwoFactorMethod.md)
@@ -120,7 +122,7 @@ Authentication schemes defined for the API:
 
 - **Type**: `OAuth`
 - **Flow**: `implicit`
-- **Authorization URL**: `https://iambackoffice.gogemini.io/iambackoffice.IamBackoffice/Login`
+- **Authorization URL**: ``
 - **Scopes**: N/A
 
 ## Tests
@@ -140,6 +142,6 @@ info@gemini-commerce.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `1.0.0`
+- API version: `v1`
     - Package version: `1.0.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

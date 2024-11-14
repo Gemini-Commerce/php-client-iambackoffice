@@ -1,7 +1,7 @@
 # # IambackofficeUser
 
 
-## Properties
+## Properties 
 
 
 Name | Type | Description | Notes
@@ -24,11 +24,12 @@ Name | Type | Description | Notes
 **password_change_required**| **bool** |   | [optional]
 **password_last_update_instant**| **string** |   | [optional]
 **preferred_languages**| **string[]** |   | [optional]
-**registrations**| [**\GeminiCommerce\Iambackoffice\Model\IambackofficeUserRegistration[]**](IambackofficeUserRegistration.md) |   | [optional]
+**registrations**| [**\OpenAPI\Client\Model\IambackofficeUserRegistration[]**](IambackofficeUserRegistration.md) |   | [optional]
 **timezone**| **string** |   | [optional]
-**two_factor**| [**\GeminiCommerce\Iambackoffice\Model\IambackofficeUserTwoFactorConfiguration**](IambackofficeUserTwoFactorConfiguration.md) |   | [optional]
+**two_factor**| [**\OpenAPI\Client\Model\IambackofficeUserTwoFactorConfiguration**](IambackofficeUserTwoFactorConfiguration.md) |   | [optional]
 **username**| **string** |   | [optional]
 **verified**| **bool** |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
+

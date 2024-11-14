@@ -1,12 +1,12 @@
 # # IambackofficeTwoFactorMethod
 
 
-## Properties
+## Properties 
 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**authenticator**| [**\GeminiCommerce\Iambackoffice\Model\IambackofficeAuthenticatorConfiguration**](IambackofficeAuthenticatorConfiguration.md) |   | [optional]
+**authenticator**| [**\OpenAPI\Client\Model\IambackofficeAuthenticatorConfiguration**](IambackofficeAuthenticatorConfiguration.md) |   | [optional]
 **email**| **string** |   | [optional]
 **id**| **string** |   | [optional]
 **method**| **string** |   | [optional]
@@ -15,3 +15,4 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
+

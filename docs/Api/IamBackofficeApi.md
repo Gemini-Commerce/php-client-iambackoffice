@@ -1,4 +1,4 @@
-# GeminiCommerce\Iambackoffice\IamBackofficeApi
+# OpenAPI\Client\IamBackofficeApi
 
 All URIs are relative to https://iambackoffice.api.gogemini.io, except if the operation defines another base path.
 
@@ -22,7 +22,7 @@ All URIs are relative to https://iambackoffice.api.gogemini.io, except if the op
 ## `iamBackofficeAssignRoles()`
 
 ```php
-iamBackofficeAssignRoles($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesResponse
+iamBackofficeAssignRoles($body): \OpenAPI\Client\Model\IambackofficeAssignRolesResponse
 ```
 
 AUTHZ
@@ -35,12 +35,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesRequest
+$body = new \OpenAPI\Client\Model\IambackofficeAssignRolesRequest(); // \OpenAPI\Client\Model\IambackofficeAssignRolesRequest
 
 try {
     $result = $apiInstance->iamBackofficeAssignRoles($body);
@@ -54,11 +54,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesRequest**](../Model/IambackofficeAssignRolesRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeAssignRolesRequest**](../Model/IambackofficeAssignRolesRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeAssignRolesResponse**](../Model/IambackofficeAssignRolesResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeAssignRolesResponse**](../Model/IambackofficeAssignRolesResponse.md)
 
 ### Authorization
 
@@ -89,12 +89,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignUserToGroupRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeAssignUserToGroupRequest
+$body = new \OpenAPI\Client\Model\IambackofficeAssignUserToGroupRequest(); // \OpenAPI\Client\Model\IambackofficeAssignUserToGroupRequest
 
 try {
     $result = $apiInstance->iamBackofficeAssignUserToGroup($body);
@@ -108,7 +108,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeAssignUserToGroupRequest**](../Model/IambackofficeAssignUserToGroupRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeAssignUserToGroupRequest**](../Model/IambackofficeAssignUserToGroupRequest.md)|  | |
 
 ### Return type
 
@@ -130,7 +130,7 @@ No authorization required
 ## `iamBackofficeCreateGroup()`
 
 ```php
-iamBackofficeCreateGroup($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeCreateGroupResponse
+iamBackofficeCreateGroup($body): \OpenAPI\Client\Model\IambackofficeCreateGroupResponse
 ```
 
 GROUPS
@@ -143,12 +143,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeCreateGroupRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeCreateGroupRequest
+$body = new \OpenAPI\Client\Model\IambackofficeCreateGroupRequest(); // \OpenAPI\Client\Model\IambackofficeCreateGroupRequest
 
 try {
     $result = $apiInstance->iamBackofficeCreateGroup($body);
@@ -162,11 +162,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeCreateGroupRequest**](../Model/IambackofficeCreateGroupRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeCreateGroupRequest**](../Model/IambackofficeCreateGroupRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeCreateGroupResponse**](../Model/IambackofficeCreateGroupResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeCreateGroupResponse**](../Model/IambackofficeCreateGroupResponse.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 ## `iamBackofficeDisableUserMfa()`
 
 ```php
-iamBackofficeDisableUserMfa($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeUserMfaResponse
+iamBackofficeDisableUserMfa($body): \OpenAPI\Client\Model\IambackofficeUserMfaResponse
 ```
 
 
@@ -197,12 +197,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeDisableUserMfaRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeDisableUserMfaRequest
+$body = new \OpenAPI\Client\Model\IambackofficeDisableUserMfaRequest(); // \OpenAPI\Client\Model\IambackofficeDisableUserMfaRequest
 
 try {
     $result = $apiInstance->iamBackofficeDisableUserMfa($body);
@@ -216,11 +216,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeDisableUserMfaRequest**](../Model/IambackofficeDisableUserMfaRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeDisableUserMfaRequest**](../Model/IambackofficeDisableUserMfaRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeUserMfaResponse**](../Model/IambackofficeUserMfaResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeUserMfaResponse**](../Model/IambackofficeUserMfaResponse.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 ## `iamBackofficeEnableUserMfa()`
 
 ```php
-iamBackofficeEnableUserMfa($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeUserMfaResponse
+iamBackofficeEnableUserMfa($body): \OpenAPI\Client\Model\IambackofficeUserMfaResponse
 ```
 
 
@@ -251,12 +251,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeEnableUserMfaRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeEnableUserMfaRequest
+$body = new \OpenAPI\Client\Model\IambackofficeEnableUserMfaRequest(); // \OpenAPI\Client\Model\IambackofficeEnableUserMfaRequest
 
 try {
     $result = $apiInstance->iamBackofficeEnableUserMfa($body);
@@ -270,11 +270,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeEnableUserMfaRequest**](../Model/IambackofficeEnableUserMfaRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeEnableUserMfaRequest**](../Model/IambackofficeEnableUserMfaRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeUserMfaResponse**](../Model/IambackofficeUserMfaResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeUserMfaResponse**](../Model/IambackofficeUserMfaResponse.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ No authorization required
 ## `iamBackofficeGenerateSecretForQR()`
 
 ```php
-iamBackofficeGenerateSecretForQR($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeGenerateSecretForQRResponse
+iamBackofficeGenerateSecretForQR($body): \OpenAPI\Client\Model\IambackofficeGenerateSecretForQRResponse
 ```
 
 MFA
@@ -305,7 +305,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -328,7 +328,7 @@ try {
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeGenerateSecretForQRResponse**](../Model/IambackofficeGenerateSecretForQRResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeGenerateSecretForQRResponse**](../Model/IambackofficeGenerateSecretForQRResponse.md)
 
 ### Authorization
 
@@ -346,7 +346,7 @@ No authorization required
 ## `iamBackofficeGetUser()`
 
 ```php
-iamBackofficeGetUser($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeGetUserResponse
+iamBackofficeGetUser($body): \OpenAPI\Client\Model\IambackofficeGetUserResponse
 ```
 
 USER
@@ -359,12 +359,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeGetUserRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeGetUserRequest
+$body = new \OpenAPI\Client\Model\IambackofficeGetUserRequest(); // \OpenAPI\Client\Model\IambackofficeGetUserRequest
 
 try {
     $result = $apiInstance->iamBackofficeGetUser($body);
@@ -378,11 +378,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeGetUserRequest**](../Model/IambackofficeGetUserRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeGetUserRequest**](../Model/IambackofficeGetUserRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeGetUserResponse**](../Model/IambackofficeGetUserResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeGetUserResponse**](../Model/IambackofficeGetUserResponse.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ No authorization required
 ## `iamBackofficeLogin()`
 
 ```php
-iamBackofficeLogin($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginResponse
+iamBackofficeLogin($body): \OpenAPI\Client\Model\IambackofficeLoginResponse
 ```
 
 LOGIN
@@ -413,12 +413,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginRequest
+$body = new \OpenAPI\Client\Model\IambackofficeLoginRequest(); // \OpenAPI\Client\Model\IambackofficeLoginRequest
 
 try {
     $result = $apiInstance->iamBackofficeLogin($body);
@@ -432,11 +432,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeLoginRequest**](../Model/IambackofficeLoginRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeLoginRequest**](../Model/IambackofficeLoginRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeLoginResponse**](../Model/IambackofficeLoginResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeLoginResponse**](../Model/IambackofficeLoginResponse.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ No authorization required
 ## `iamBackofficeLoginMfa()`
 
 ```php
-iamBackofficeLoginMfa($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginResponse
+iamBackofficeLoginMfa($body): \OpenAPI\Client\Model\IambackofficeLoginResponse
 ```
 
 LOGIN MFA
@@ -467,12 +467,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginMfaRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeLoginMfaRequest
+$body = new \OpenAPI\Client\Model\IambackofficeLoginMfaRequest(); // \OpenAPI\Client\Model\IambackofficeLoginMfaRequest
 
 try {
     $result = $apiInstance->iamBackofficeLoginMfa($body);
@@ -486,11 +486,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeLoginMfaRequest**](../Model/IambackofficeLoginMfaRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeLoginMfaRequest**](../Model/IambackofficeLoginMfaRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeLoginResponse**](../Model/IambackofficeLoginResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeLoginResponse**](../Model/IambackofficeLoginResponse.md)
 
 ### Authorization
 
@@ -508,7 +508,7 @@ No authorization required
 ## `iamBackofficeLogout()`
 
 ```php
-iamBackofficeLogout($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeLogoutResponse
+iamBackofficeLogout($body): \OpenAPI\Client\Model\IambackofficeLogoutResponse
 ```
 
 
@@ -521,12 +521,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeLogoutRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeLogoutRequest
+$body = new \OpenAPI\Client\Model\IambackofficeLogoutRequest(); // \OpenAPI\Client\Model\IambackofficeLogoutRequest
 
 try {
     $result = $apiInstance->iamBackofficeLogout($body);
@@ -540,11 +540,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeLogoutRequest**](../Model/IambackofficeLogoutRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeLogoutRequest**](../Model/IambackofficeLogoutRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeLogoutResponse**](../Model/IambackofficeLogoutResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeLogoutResponse**](../Model/IambackofficeLogoutResponse.md)
 
 ### Authorization
 
@@ -562,7 +562,7 @@ No authorization required
 ## `iamBackofficeRegister()`
 
 ```php
-iamBackofficeRegister($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeRegistrationResponse
+iamBackofficeRegister($body): \OpenAPI\Client\Model\IambackofficeRegistrationResponse
 ```
 
 REGISTRATION
@@ -575,12 +575,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeRegistrationRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeRegistrationRequest
+$body = new \OpenAPI\Client\Model\IambackofficeRegistrationRequest(); // \OpenAPI\Client\Model\IambackofficeRegistrationRequest
 
 try {
     $result = $apiInstance->iamBackofficeRegister($body);
@@ -594,11 +594,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeRegistrationRequest**](../Model/IambackofficeRegistrationRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeRegistrationRequest**](../Model/IambackofficeRegistrationRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeRegistrationResponse**](../Model/IambackofficeRegistrationResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeRegistrationResponse**](../Model/IambackofficeRegistrationResponse.md)
 
 ### Authorization
 
@@ -616,7 +616,7 @@ No authorization required
 ## `iamBackofficeSearchGroups()`
 
 ```php
-iamBackofficeSearchGroups($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeSearchGroupsResponse
+iamBackofficeSearchGroups($body): \OpenAPI\Client\Model\IambackofficeSearchGroupsResponse
 ```
 
 
@@ -629,12 +629,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeSearchGroupsRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeSearchGroupsRequest
+$body = new \OpenAPI\Client\Model\IambackofficeSearchGroupsRequest(); // \OpenAPI\Client\Model\IambackofficeSearchGroupsRequest
 
 try {
     $result = $apiInstance->iamBackofficeSearchGroups($body);
@@ -648,11 +648,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeSearchGroupsRequest**](../Model/IambackofficeSearchGroupsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeSearchGroupsRequest**](../Model/IambackofficeSearchGroupsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeSearchGroupsResponse**](../Model/IambackofficeSearchGroupsResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeSearchGroupsResponse**](../Model/IambackofficeSearchGroupsResponse.md)
 
 ### Authorization
 
@@ -670,7 +670,7 @@ No authorization required
 ## `iamBackofficeUnassignRoles()`
 
 ```php
-iamBackofficeUnassignRoles($body): \GeminiCommerce\Iambackoffice\Model\IambackofficeUnassignRolesResponse
+iamBackofficeUnassignRoles($body): \OpenAPI\Client\Model\IambackofficeUnassignRolesResponse
 ```
 
 
@@ -683,12 +683,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new GeminiCommerce\Iambackoffice\Api\IamBackofficeApi(
+$apiInstance = new OpenAPI\Client\Api\IamBackofficeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \GeminiCommerce\Iambackoffice\Model\IambackofficeUnassignRolesRequest(); // \GeminiCommerce\Iambackoffice\Model\IambackofficeUnassignRolesRequest
+$body = new \OpenAPI\Client\Model\IambackofficeUnassignRolesRequest(); // \OpenAPI\Client\Model\IambackofficeUnassignRolesRequest
 
 try {
     $result = $apiInstance->iamBackofficeUnassignRoles($body);
@@ -702,11 +702,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Iambackoffice\Model\IambackofficeUnassignRolesRequest**](../Model/IambackofficeUnassignRolesRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\IambackofficeUnassignRolesRequest**](../Model/IambackofficeUnassignRolesRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Iambackoffice\Model\IambackofficeUnassignRolesResponse**](../Model/IambackofficeUnassignRolesResponse.md)
+[**\OpenAPI\Client\Model\IambackofficeUnassignRolesResponse**](../Model/IambackofficeUnassignRolesResponse.md)
 
 ### Authorization
 
